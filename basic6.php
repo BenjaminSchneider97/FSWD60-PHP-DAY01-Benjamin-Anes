@@ -78,7 +78,7 @@
   					  <h1>'. $value["name"]. '</h1>
    					   <img src="'.$value["img"]. '">
      					 <div class="caption">
-       					 <h3>Thumbnail label</h3>
+       					 <h3>Stats</h3>
        					 <div class="row">
        					  <p class="col-md-4">'."HEIGHT" . $value["height"]. '</p>
        					  <div class="col-md-8">
