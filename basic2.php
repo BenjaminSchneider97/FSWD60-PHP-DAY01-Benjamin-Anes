@@ -7,9 +7,9 @@
 <body>
 	<?php 
 	$d=date("D");
-	if($d=="Monday")
+	if($d=="Mon")
 	echo "Happy Monday!";
-	elseif ($d!="Monday")
+	elseif ($d!="Mon")
 	echo "Have a nice day!";
 	 ?>
 	
