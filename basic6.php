@@ -7,11 +7,12 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	<style>
-	body{
+	.row{
 		display: flex;
-	}
-	#myrow{
-		justify-content: space-between;
+		justify-content: space-around;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
 	}
 	</style>
 </head>
