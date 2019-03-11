@@ -3,20 +3,24 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Basic6</title>
-	<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<style>
+	body{
+		display: flex;
+	}
+	#myrow{
+		justify-content: space-between;
+	}
+	</style>
 </head>
 <body>
 	<?php 
 		$heroes= array(
 			"Captain America"=>array(
+				"name"=> "Captain America",
+				"img"=> "img/america.jpg",
 				"height"=> 186,
 				"intelligence"=>4,
 				"strength"=>29,
@@ -26,6 +30,8 @@
 
 			),
 			"Iron Man"=>array(
+				"name"=> "Iron Man",
+				"img"=> "img/iron.jpeg",
 				"height"=> 183,
 				"intelligence"=>6,
 				"strength"=>48,
@@ -34,6 +40,8 @@
 				"fighting skills"=>85
 			),
 			"Thor"=>array(
+				"name"=> "Thor",
+				"img"=> "img/thor.jpg",
 				"height"=> 195,
 				"intelligence"=>4,
 				"strength"=>49,
@@ -42,23 +50,22 @@
 				"fighting skills"=>85
 			),
 		);
+
+		echo "<div class='row' id='myrow'>";
+
 		foreach($heroes as $value){
-			echo '<div class="row">
-  					<div class="col-sm-6 col-md-4">
+			echo ' <div class="col-sm-6 col-md-3">
   					  <div class="thumbnail">
-   					   <img src="..." alt="...">
+  					  <h1>'. $value["name"]. '</h1>
+   					   <img src="'.$value["img"]. '">
      					 <div class="caption">
        					 <h3>Thumbnail label</h3>
        						 <p>...</p>
    					  </div>
   					 </div>
- 				 	</div>
 				  </div> ';
-
 		}
-		
-		
-
-	 ?>
+		echo "</div>";
+	?>
 </body>
 </html>
